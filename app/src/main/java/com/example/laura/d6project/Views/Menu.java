@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.john.quizsurvey.MainActivity;
-import com.example.john.quizsurvey.R;
+import com.example.laura.d6project.MainActivity;
+import com.example.laura.d6project.R;
 
 
 /**

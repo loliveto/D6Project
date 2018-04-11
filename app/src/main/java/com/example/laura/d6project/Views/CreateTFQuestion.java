@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.john.quizsurvey.DataModels.Questionare;
-import com.example.john.quizsurvey.DataModels.TFQuestion;
-import com.example.john.quizsurvey.MainActivity;
-import com.example.john.quizsurvey.R;
+import com.example.laura.d6project.DataModels.Questionare;
+import com.example.laura.d6project.DataModels.TFQuestion;
+import com.example.laura.d6project.MainActivity;
+import com.example.laura.d6project.R;
 
 
 public class CreateTFQuestion extends Fragment {

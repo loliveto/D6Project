@@ -1,4 +1,4 @@
-package com.example.john.quizsurvey;
+package com.example.laura.d6project;
 
 
 import android.support.v4.app.FragmentManager;
@@ -6,20 +6,20 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.john.quizsurvey.DataModels.Questionare;
-import com.example.john.quizsurvey.Views.CreateTFQuestion;
-import com.example.john.quizsurvey.Views.Menu;
-import com.example.john.quizsurvey.Views.ViewAllQuestionares;
-import com.example.john.quizsurvey.Views.EditQuestionare;
+import com.example.laura.d6project.DataModels.Questionare;
+import com.example.laura.d6project.Views.CreateTFQuestion;
+import com.example.laura.d6project.Views.Menu;
+import com.example.laura.d6project.Views.ViewAllQuestionares;
+import com.example.laura.d6project.Views.EditQuestionare;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toMenu();
-
     }
 
     //Note: R.id.main_activity is the id of the (only) layout in activity_main.xml, so we are displaying our freagments in that

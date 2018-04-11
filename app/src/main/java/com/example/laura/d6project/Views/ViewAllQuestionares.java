@@ -11,14 +11,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.john.quizsurvey.DataModels.Questionare;
-import com.example.john.quizsurvey.MainActivity;
-import com.example.john.quizsurvey.R;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.example.laura.d6project.DataModels.Questionare;
+import com.example.laura.d6project.MainActivity;
+import com.example.laura.d6project.R;
+//import com.google.firebase.database.ChildEventListener;
+//import com.google.firebase.database.DataSnapshot;
+//import com.google.firebase.database.DatabaseError;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -61,55 +61,55 @@ public class ViewAllQuestionares extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_questionare_list, container, false);
         listView = view.findViewById(R.id.questionareList);
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference ref = database.getReference("questionares");
+       // final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        //final DatabaseReference ref = database.getReference("questionares");
         questionares = new ArrayList<>();
-        final ChildEventListener listener = new ChildEventListener() {
-
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Questionare questionare = dataSnapshot.getValue(Questionare.class);
-                questionares.add(questionare);
-                updateListView(questionares);
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        };
-
-        ref.addChildEventListener(listener);
-        Button back = view.findViewById(R.id.backToMain);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //VERY IMPORTANT- App will eventually crash if listener not detached before leave fragment
-                ref.removeEventListener(listener);
-                ((MainActivity)getActivity()).toMenu();
-            }
-        });
+//        final ChildEventListener listener = new ChildEventListener() {
+//
+//            @Override
+//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+//                Questionare questionare = dataSnapshot.getValue(Questionare.class);
+//                questionares.add(questionare);
+//                updateListView(questionares);
+//            }
+//
+//            @Override
+//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+//
+//            }
+//
+//            @Override
+//            public void onChildRemoved(DataSnapshot dataSnapshot) {
+//
+//            }
+//
+//            @Override
+//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        };
+//
+//        ref.addChildEventListener(listener);
+//        Button back = view.findViewById(R.id.backToMain);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //VERY IMPORTANT- App will eventually crash if listener not detached before leave fragment
+//                ref.removeEventListener(listener);
+//                ((MainActivity)getActivity()).toMenu();
+//            }
+//        });
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //VERY IMPORTANT- App will eventually crash if listener not detached before leave fragment
-                ref.removeEventListener(listener);
+                //ref.removeEventListener(listener);
                 Questionare selectedQuestionare = questionares.get(position);
                 ((MainActivity)getActivity()).toSeeQuestionare(selectedQuestionare);
             }

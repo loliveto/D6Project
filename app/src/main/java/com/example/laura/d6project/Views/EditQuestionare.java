@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.john.quizsurvey.DataModels.Questionare;
-import com.example.john.quizsurvey.MainActivity;
-import com.example.john.quizsurvey.R;
+import com.example.laura.d6project.DataModels.Questionare;
+import com.example.laura.d6project.MainActivity;
+import com.example.laura.d6project.R;
 
 import java.util.ArrayList;
 
